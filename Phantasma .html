@@ -28,7 +28,7 @@
   firebase.initializeApp(config);
 </script>
 <script src="firebase logistics.js"></script>
-<!--<script>
+<script>
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyCvhdrlLIZ6ta27jr3tsjN9TOT9ckzTKSA",
@@ -39,35 +39,7 @@
       messagingSenderId: "1032090528080"
     };
     firebase.initializeApp(config);
-  </script>-->
-
-
-<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
-
-<script>
-    // Initialize Firebase
-    const firebase = require("firebase");
-// Required for side-effects
-require("firebase/firestore");
-firebase.initializeApp({
-  apiKey: 'AIzaSyCvhdrlLIZ6ta27jr3tsjN9TOT9ckzTKSA',
-  authDomain: 'phantasma-app.firebaseapp.com',
-  projectId: 'phantasma-app'
-});
-
-var db = firebase.firestore();
-
-db.collection("stats").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-    });
-});
-
-
-
   </script>
- 
 </head>
 
 <!--<button>About Us</button> 
@@ -87,7 +59,7 @@ db.collection("stats").get().then((querySnapshot) => {
 <br>
 <br>
 <div class = "img">
-    <img title="This what the mobile app looks like" src="www.png" width="600" height="900">
+    <img title="This what the mobile app looks like" src="www.png" width="600" height="850">
 </div>
 <br>
 <br>
