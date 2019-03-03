@@ -54,6 +54,10 @@ li1 {
     width: 100%;
     font-family: Verdana, Geneva, sans-serif;
   }
+  img{
+    position: fixed;
+    top: 80px;
+  }
   input[type=number] {  
     width: 100%;
     padding: 12px 20px;
