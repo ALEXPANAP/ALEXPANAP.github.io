@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-US">
+<html>
+<body>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCvhdrlLIZ6ta27jr3tsjN9TOT9ckzTKSA",
+    authDomain: "phantasma-app.firebaseapp.com",
+    databaseURL: "https://phantasma-app.firebaseio.com",
+    projectId: "phantasma-app",
+    storageBucket: "phantasma-app.appspot.com",
+    messagingSenderId: "1032090528080"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="firebase logistics.js"></script>
+<head>
+    <script language="javascript">
+            function multiply(){
+              var kwh;
+              switch(document.getElementById('Appliance').value){
+        case "TV":
+                kwh = 48.5;
+                break;
+            case "Stereo":
+                kwh = 5.44;
+                break;
+            case "Microwave":
+                kwh = 4.9;
+                break;
+            case "Computer":
+                kwh =  83.3 ;
+                break;
+            case "DVR":
+                kwh = 43.61;
+                break;
+            case "DVD / Blu-Ray Player":
+                kwh = 10.58;
+                break;
+            case "Satellite TV Box":
+                kwh = 33.05;
+                break;
+            case "Phone":
+                kwh = 3.0;
+                break;
+            case "Laptop":
+                kwh = 50.0;
+                break;
+            default:
+                return 0.0;
+                break;
+      }
+      function round(value, decimals) {
+       return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+  }
+      console.log(kwh);
+            var ans= (kwh*(document.getElementById('hours').value)*.12)/1000
+            addUser(ans/.12);
+            document.getElementById('answer').innerHTML = "Wow you saved " + round(ans, 3) + " kWh!" + " Every year you shave $" + round(round(ans, 3)*.12*365, 2) + " off your electricity bill";
+        }
+        </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="Description" content="Information on how much money and energy saved in Phantasma, leaderboards and mission statement">
+  <meta name="Keywords" content="Vampire energy, Money Saving, Phantasma">
+  <meta name="Author" content="Alex Pan & Sidney Hough">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name = "application-name" content = "Phantasma">
+  <link rel="stylesheet" type="text/css"href="Styling.css">
+</head>
+
+<!--<button>About Us</button> 
+<button>Calculator</button>-->
+
+
+<!--h goes from 1-6 with 1 being biggest. Where h is determines where it is on webpage and # determines size-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="font-size:60px;"> Calculate how much money you have saved!</p>
+<div class = "form">
+    <p>Appliance</p>
+<form id = "form1">
+        <select id="Appliance" name="name">
+        <option value= "Microwave" >Microwave</option> 
+        <option >DVD / Blu-Ray Player</option>
+        <option >TV</option>
+        <option >Computer</option>
+        <option >Satellite TV Box</option>
+        <option >Garage Door Opener</option>
+        <option >Stereo</option>
+        <option >DVR</option>
+        <option >Laptop</option>
+        <option >Phone</option>
+        </select>
+</form> 
+<form method = "post" id = "forml">
+    <p>Hours unplugged</p>
+    <input type="number" id="hours" name="hours">
+    <input type="button" value="answer" name="now" onClick="multiply()">
+    <br>
+    <p3 id = "answer"> </p3>
+</form>
+</div>
+<ul>
+    <li1><a style="font-size:40px;" class = "TITLE">P h a n t a s m a</a></li1>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>     
+    <li><a style="font-size:28.9px;" class = "button" href="Phantasma .html">Home</a></li>
+    <li><a style="font-size:28.9px;" class = "active" href="Calc.html">Calculator</a></li>
+    <li><a style="font-size:28.9px;" class = "button" href="about.html">About</a></li>
+</ul>
+
+<!--<a href="https://docs.google.com/document/d/1ComOiEkxwUSq5SZHDXkVDehPcXBImtgHlz2jwPEJ8JM/edit">This is a link</a> -->
+
+<!--<img title="I'm a tooltip" src="ww(5).jpg" alt="W3Schools.com" width="100" height="100"> -->
+
+
+<script src="app.js" type = "application/ javascript"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCvhdrlLIZ6ta27jr3tsjN9TOT9ckzTKSA",
+    authDomain: "phantasma-app.firebaseapp.com",
+    databaseURL: "https://phantasma-app.firebaseio.com",
+    projectId: "phantasma-app",
+    storageBucket: "phantasma-app.appspot.com",
+    messagingSenderId: "1032090528080"
+  };
+  firebase.initializeApp(config);
+</script>
+
+</body>
+</html>
