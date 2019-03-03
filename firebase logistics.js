@@ -7,7 +7,7 @@
       firebase.database().ref('kwh').once('value', (snapshot) => {
       kwh = snapshot.val();
       document.getElementById("johNNy").innerHTML = round(kwh,3) +" KWH";
-      document.getElementById("joHnny").innerHTML = "$"+round(kwh*.12*365, 2);
+      document.getElementById("joHnny").innerHTML = "$"+round(kwh*.12, 2);
       console.log(kwh);
     });
 
